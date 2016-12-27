@@ -1,0 +1,45 @@
+此插件用于实现网页中的放大镜效果（原生js）
+效果如图：
+
+
+1.首先要在要使用的HTML页面中引入css样式及js代码，如：
+
+<link rel="stylesheet" href="src/Magnifier.css" /> <!--写在head标签中-->
+
+<script type="text/javascript" src="src/Magnifier.js"></script><!--建议写在body结束标签之前-->
+
+2.在要放入放大镜的地方添加如下代码：
+<div id="box">
+	<div class="middle-img-box">
+		<!--默认放大的为第一张,如果修改图片,则把第一张路径放于此处-->
+		<img src="images/1.jpg" class="middle-img"/>
+		<div class="image-zoom"></div>
+	</div>
+	<div class="big-img-box">
+		<!--默认放大的为第一张,如果修改图片,则把第一张路径放于此处-->
+		<img src="images/1.jpg" class="big-img"/>
+	</div>
+	<ul class="small-img-box">
+		<li><a href="##"><img src="images/1.jpg" alt="" class="active"/></a></li>
+		<!--默认第一张为选中状态-->
+		<li><a href="##"><img src="images/2.jpg" alt=""/></a></li>
+		<li><a href="##"><img src="images/3.jpg" alt=""/></a></li>
+		<li><a href="##"><img src="images/4.jpg" alt=""/></a></li>
+		<li><a href="##"><img src="images/5.jpg" alt=""/></a></li>
+	</ul> 
+</div>
+3.想要放置放大镜的位置可以单独设置，本插件样式如下，如果想要修改请参考以下代码：
+#box{
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+	width: 350px;
+	height: auto;
+	background: #eee;
+}
+4.除此之外还要注意，此放大镜只能放5张照片不能增减。
+
+5.遮罩层为<div class="image-zoom"></div>的背景图片，路径为： url(../images/icon.png);如果要修改，可以到images文件夹中将icon.png的图片拿到目标文件夹，并到css中修改. image-zoom的background的属性值。
+
+
+
