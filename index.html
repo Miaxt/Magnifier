@@ -3,18 +3,23 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<!--建议将css引入放于此处-->
 		<link rel="stylesheet" href="src/Magnifier.css" />
 	</head>
 	<body>
 		<div id="box">
-			 <div class="middle-img-box">
+			 <div class="middle-img-box"><!--展示图片区域-->
+			 	<!--默认为第一张图片-->
 				<img src="images/1.jpg" class="middle-img"/>
+				<!--遮罩层-->
 				<div class="image-zoom"></div>
 			</div>
-			<div class="big-img-box">
+			<div class="big-img-box"><!--放大的图片所在的盒子-->
+				<!--默认放大第一张，与展示区域对应-->
 				<img src="images/1.jpg" class="big-img"/>
 			</div>
-			<ul class="small-img-box">
+			<ul class="small-img-box"><!--小图片选项卡部分-->
+				<!--让第一张小图片高亮显示，对应默认的第一张图-->
 				<li><a href="##"><img src="images/1.jpg" alt="" class="active"/></a></li>
 				<li><a href="##"><img src="images/2.jpg" alt=""/></a></li>
 				<li><a href="##"><img src="images/3.jpg" alt=""/></a></li>
@@ -22,6 +27,7 @@
 				<li><a href="##"><img src="images/5.jpg" alt=""/></a></li>
 			</ul> 
 		</div>
+		<!--建议将js引入放于此处-->
 		<script type="text/javascript" src="src/Magnifier.js"></script>
 	</body>
 
